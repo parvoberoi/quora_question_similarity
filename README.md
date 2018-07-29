@@ -9,7 +9,11 @@ The project provides a basic trainer file(python/example_trainer.py) which is pr
 
 If you want to test whether two questions(strings) are similar or not, i also provide a ready to use (python/question_similarity.py) which uses a more robust model which has been trained on the 80/20 split of the entire 400k dataset with 25 iterations of the training data.
 
-example usage: python python/question_similarity.py "What are some examples of products that can be make from crude oil?" "What are some of the products made from crude oil?"
+example usage: 
+```
+/quora-similar-questions:]$ python python/question_similarity.py "What are some examples of products that can be make from crude oil?" "What are some of the products made from crude oil?"
+Yes
+```
 
 PS: ensure that the two questions are provided within quotes to ensure that they are correctly parsed.
 I also provide the tfidf model that was learned as part of the full training to ensure that the results can be reproduced as well as to be used for the prediction stage.
