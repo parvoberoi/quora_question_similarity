@@ -19,11 +19,15 @@ I also provide the tfidf model that was learned as part of the full training to 
 The simple siamese network with very basic tfidf pre-processing was able to achieve a accuracy of 79.8% on a random 80/20 split of the quora data.
 
 # Future works
+## ML Improvements
 - preprocess data to get rid of punctuation marks
 - try converting common words (What, which, where, how, etc.) to lowercase as currently the tfidf model associates differents weights with uppercase and lowercase instances
 - investigate getting rid of stop words as well as converting apostrophe words to their normal forms
 - investigate augmenting the training data by randomly mixing two unrelated questions as not-similar.
 - run a parameter sweep on the various NN architecural params to find a optimal solution
+
+## System Improvements
+- build a standalone executable of the python predictor with all packages included to facilitate easier predictions
 
 # System Requirements
 - You will need keras 2.1.6, numpy 1.13.3, tensorflow 1.9.0 and pandas 0.18.0
