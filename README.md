@@ -24,3 +24,6 @@ The simple siamese network with very basic tfidf pre-processing was able to achi
 - investigate getting rid of stop words as well as converting apostrophe words to their normal forms
 - investigate augmenting the training data by randomly mixing two unrelated questions as not-similar.
 - run a parameter sweep on the various NN architecural params to find a optimal solution
+
+# System Requirements
+- You will need keras 2.1.6, numpy 1.13.3, tensorflow 1.9.0 and pandas 0.18.0
