@@ -25,6 +25,7 @@ The simple siamese network with very basic tfidf pre-processing was able to achi
 - investigate getting rid of stop words as well as converting apostrophe words to their normal forms
 - investigate augmenting the training data by randomly mixing two unrelated questions as not-similar.
 - run a parameter sweep on the various NN architecural params to find a optimal solution
+- experiment with a generic word2vec scores from wikipedia instead of one built out from the question dataset
 
 ## System Improvements
 - build a standalone executable of the python predictor with all packages included to facilitate easier predictions
