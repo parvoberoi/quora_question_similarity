@@ -23,3 +23,4 @@ The simple siamese network with very basic tfidf pre-processing was able to achi
 - try converting common words (What, which, where, how, etc.) to lowercase as currently the tfidf model associates differents weights with uppercase and lowercase instances
 - investigate getting rid of stop words as well as converting apostrophe words to their normal forms
 - investigate augmenting the training data by randomly mixing two unrelated questions as not-similar.
+- run a parameter sweep on the various NN architecural params to find a optimal solution
