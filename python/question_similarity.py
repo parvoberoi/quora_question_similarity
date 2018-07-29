@@ -6,11 +6,7 @@ import os
 import pickle
 import sys
 
-def main():
-	questions = sys.argv[1:]
-	if len(questions) != 2:
-		raise Exception("Incorrect number of sentences provided. Please enclose input questions in quotes as two separate arguments")
-	
+def predict_similarity(question_left, question_right):
 	cwd = os.getcwd()
 
 	# load final model
@@ -21,18 +17,23 @@ def main():
 	vectorizer = pickle.load(open(os.path.join(cwd, "models/final_tfidf.pickle"), "rb"))
 	word2tfidf = dict(zip(vectorizer.get_feature_names(), vectorizer.idf_))
 	
-	question_1 = unicode(questions[0])
-	question_2 = unicode(questions[1])
+	question_1 = unicode(question_left)
+	question_2 = unicode(question_right)
 
 	question_1_vector = get_text_vector(question_1, word2tfidf)
 	question_2_vector = get_text_vector(question_2, word2tfidf)
 
 	prediction = model.predict([question_1_vector, question_2_vector])
-	if prediction[0][0] < 0.5:
-		print("Yes")
-	else:
-		print("No")
+	return prediction[0][0] < 0.5
 
 
 if __name__ == "__main__":
-	main()
+	questions = sys.argv[1:]
+	if len(questions) != 2:
+		raise Exception("Incorrect number of sentences provided. Please enclose input questions in quotes as two separate arguments")
+	
+
+	if(predict_similarity(questions[0], questions[1])):
+		print("Yes")
+	else:
+		print("No")
