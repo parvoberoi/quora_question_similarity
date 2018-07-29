@@ -7,8 +7,6 @@ import pickle
 import sys
 
 def main():
-	print("Hello world")
-	print_num(10)
 	questions = sys.argv[1:]
 	if len(questions) != 2:
 		raise Exception("Incorrect number of sentences provided. Please enclose input questions in quotes as two separate arguments")
