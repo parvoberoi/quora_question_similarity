@@ -12,6 +12,8 @@ If you want to test whether two questions(strings) are similar or not, i also pr
 example usage: python python/question_similarity.py "What are some examples of products that can be make from crude oil?" "What are some of the products made from crude oil?"
 
 PS: ensure that the two questions are provided within quotes to ensure that they are correctly parsed.
+I also provide the tfidf model that was learned as part of the full training to ensure that the results can be reproduced as well as to be used for the prediction stage.
+
 
 # Results
 The simple siamese network with very basic tfidf pre-processing was able to achieve a accuracy of 79.8% on a random 80/20 split of the quora data.
@@ -20,3 +22,4 @@ The simple siamese network with very basic tfidf pre-processing was able to achi
 - preprocess data to get rid of punctuation marks
 - try converting common words (What, which, where, how, etc.) to lowercase as currently the tfidf model associates differents weights with uppercase and lowercase instances
 - investigate getting rid of stop words as well as converting apostrophe words to their normal forms
+- investigate augmenting the training data by randomly mixing two unrelated questions as not-similar.
